@@ -1,0 +1,41 @@
+==45484== Memcheck, a memory error detector
+==45484== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==45484== Using Valgrind-3.25.0 and LibVEX; rerun with -h for copyright info
+==45484== Command: ./ex4
+==45484== 
+==45484== Use of uninitialised value of size 8
+==45484==    at 0x48E2522: _itoa_word (_itoa.c:183)
+==45484==    by 0x48ED3F4: __printf_buffer (vfprintf-process-arg.c:155)
+==45484==    by 0x48EF678: __vfprintf_internal (vfprintf-internal.c:1544)
+==45484==    by 0x48E34F2: printf (printf.c:33)
+==45484==    by 0x4001174: main (ex4.c:11)
+==45484== 
+==45484== Conditional jump or move depends on uninitialised value(s)
+==45484==    at 0x48E2529: _itoa_word (_itoa.c:183)
+==45484==    by 0x48ED3F4: __printf_buffer (vfprintf-process-arg.c:155)
+==45484==    by 0x48EF678: __vfprintf_internal (vfprintf-internal.c:1544)
+==45484==    by 0x48E34F2: printf (printf.c:33)
+==45484==    by 0x4001174: main (ex4.c:11)
+==45484== 
+==45484== Conditional jump or move depends on uninitialised value(s)
+==45484==    at 0x48EDF9A: __printf_buffer (vfprintf-process-arg.c:186)
+==45484==    by 0x48EF678: __vfprintf_internal (vfprintf-internal.c:1544)
+==45484==    by 0x48E34F2: printf (printf.c:33)
+==45484==    by 0x4001174: main (ex4.c:11)
+==45484== 
+==45484== Conditional jump or move depends on uninitialised value(s)
+==45484==    at 0x48EDFCA: __printf_buffer (vfprintf-process-arg.c:208)
+==45484==    by 0x48EF678: __vfprintf_internal (vfprintf-internal.c:1544)
+==45484==    by 0x48E34F2: printf (printf.c:33)
+==45484==    by 0x4001174: main (ex4.c:11)
+==45484== 
+==45484== 
+==45484== HEAP SUMMARY:
+==45484==     in use at exit: 0 bytes in 0 blocks
+==45484==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==45484== 
+==45484== All heap blocks were freed -- no leaks are possible
+==45484== 
+==45484== Use --track-origins=yes to see where uninitialised values come from
+==45484== For lists of detected and suppressed errors, rerun with: -s
+==45484== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)
